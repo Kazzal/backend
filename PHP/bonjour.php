@@ -7,10 +7,7 @@
 </head>
 <body>
     <?php
-   $var1 = "bonjour";
-   $$var1 = "le monde";
-
-   echo $bonjour;
+    
     ?>
 </body>
 </html>
