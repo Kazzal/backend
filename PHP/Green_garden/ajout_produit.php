@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <?php
-        include "../header.php";
+        include "header.php";
     ?>
 
     <?php
@@ -112,6 +112,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" id="reference" name="reference" required>
         </div>
         <div>
+            <label for="fournisseur">Nom Fournisseur:</label>
+            <input type="text" id="fournisseur" name="fournisseur" required>
+        </div>
+        <div>
             <label for="prix">Prix HT Fournisseur:</label>
             <input type="number" id="prix" name="prix" min="0" step="0.01" required>
         </div>
@@ -119,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="tva">Taux TVA:</label>
             <input type="number" id="tva" name="tva" min="0" step="0.01" required>
         </div>
+        <label for="categorie">Catégorie:</label>
         <select name="categorie">
             <?php
             $stmt = $conn->query("SELECT * from t_d_categorie");
@@ -139,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
     
     <?php
-        include "../footer.php";
+        include "footer.php";
     ?>
 </body>
 

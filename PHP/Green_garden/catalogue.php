@@ -13,7 +13,7 @@
 <body>
 
     <?php
-    include "../header.php";
+        include "header.php";
     ?>
     <div>
         <form method="post" action="">
@@ -86,7 +86,7 @@
     </div>
 
     <?php
-    include "../footer.php";
+        include "footer.php";
     ?>
 
 
