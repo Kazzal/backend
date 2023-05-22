@@ -1,3 +1,39 @@
+<?php
+session_reset();
+
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $login = $_POST["login"];
+        $password = $_POST["password"];
+
+        $host = "localhost";
+        $user = "root";
+        $pwd = "";
+        $dbname = "greengarden";
+
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pwd);
+        } catch (PDOException $e) {
+            echo "Connection failed " . $e->getMessage();
+        }
+
+        $stmt = $conn->prepare('SELECT * FROM t_d_user WHERE Id_User=:id');
+        $stmt->bindValue(':id', $user_id);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+
+        <p> Coucou <?php echo $user['Login'] ?> </p>
+
+<?php
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,6 +50,7 @@
 
     <?php
     include "header.php";
+    require 'functions.php';
     ?>
 
     <main>
