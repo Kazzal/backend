@@ -1,6 +1,8 @@
 <?php
 // Démarrage de la session
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Vérification si l'utilisateur est déjà connecté
 if (isset($_SESSION['user_id'])) {

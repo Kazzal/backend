@@ -1,3 +1,9 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,7 +19,7 @@
 
 <body>
     <footer>
-        <p>&copy; Copyright Village Green by AHAMADA Kazouini</p>
+        <p>&copy; Copyright Village green garden by AHAMADA Kazouini</p>
         <div>
             <ul>
                 <h3>Informations</h3>

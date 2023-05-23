@@ -1,3 +1,10 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,8 +16,9 @@
 </head>
 
 <body>
+    
     <?php
-    include "header.php";
+    
     require 'functions.php';
 
     // Récupération des informations de l'utilisateur connecté

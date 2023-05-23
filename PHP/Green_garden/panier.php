@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +25,6 @@
     <h1>Mon panier</h1>
 
     <?php
-    session_start();
     // Récupération des informations de l'utilisateur connecté
     $host = "localhost"; // Nom d'hôte de la base de données
     $user = "root"; // Nom d'utilisateur de la base de données

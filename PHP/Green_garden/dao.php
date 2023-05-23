@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 class dao
 {
 
@@ -22,7 +25,7 @@ class dao
             } else {
                 $this->user_type = "";
             }
-            switch ($this->user_type) {
+            /*  switch ($this->user_type) {
                 case 'admin':
 
                     $this->db_user = 'admin';
@@ -48,7 +51,9 @@ class dao
                     $this->db_user = 'root';
                     $this->db_password = '';
                     break;
-            }
+            } */
+            $this->db_user = 'root';
+            $this->db_password = '';
         } else {
             $this->db_user = 'root';
             $this->db_password = '';

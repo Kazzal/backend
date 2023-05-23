@@ -1,4 +1,7 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 // Fonction pour échapper les caractères spéciaux d'une chaîne
 function escape_string($str)
 {

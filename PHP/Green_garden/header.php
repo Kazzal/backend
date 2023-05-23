@@ -1,6 +1,8 @@
 <?php
 // Ne pas oublier important!!!!
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (isset($_SESSION['user_id'])) :
     // Vérification si l'utilisateur existe déjà dans la base de données
@@ -50,7 +52,7 @@ if (isset($_SESSION['user_id'])) :
                     <li><a href="inscription.php">Inscription</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="catalogue.php">Catalogue</a></li>
-                    <li><a href="consult_panier.php">Panier</a></li>
+                    <li><a href="panier.php">Panier</a></li>
                     <li><a href="ajout_produit.php">Ajouter un produit</a></li>
                     <li><a href="validation_panier.php">Valider commande</a></li>
                 </ul>
