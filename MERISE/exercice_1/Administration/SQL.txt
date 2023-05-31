@@ -1,0 +1,19 @@
+CREATE TABLE commande (
+    num_bdc INT NOT NULL AUTO_INCREMENT,
+    num_eng INT,
+    date_bdc DATE NOT NULL,
+    num_fact VARCHAR(20),
+    date_fact DATE,
+    date_refus DATE,
+    num_mandat INT,
+    id_fournisseur INT NOT NULL,
+
+    PRIMARY KEY(num_bdc),
+
+    FOREIGN KEY(num_mandat)
+    REFERENCES mandat(num_mandat),
+
+    FOREIGN KEY(id_fournisseur)
+    REFERENCES fournisseur(id_fournisseur)
+
+)ENGINE=INNODB;
