@@ -37,7 +37,7 @@ try {
     <?php include 'header.php'; ?>
 
     <h1>Formulaire de recherche</h1>
-    <form method="post">
+    <form method="POST">
         <label for="Recherche">Recherche : </label>
         <input type="search" id=search1 name="search"><br><br>
         <label for="motif">Motif : </label>
