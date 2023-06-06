@@ -195,9 +195,6 @@
     echo "L'adresse IP du serveur est : " . $addr_IP_serveur . " et l'adresse IP du client est : " . $addr_IP_client;
     ?>
 
-    ?>
-
-
 </body>
 
 </html>

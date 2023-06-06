@@ -99,11 +99,41 @@
 
     <?php
     // lecture d'un tableau
+    $factures = array("janvier" => 500, "février" => 620, "mars" => 300, "avril" => 130, "mai" => 560, "juin" => 350);
 
-    foreach($tableau as $value){
-        
+    $total_annuel = 0;
+    
+    // "$factures est le tableau et "as' affecte à la variable à droite(ici "$value") la valeur du tableauen cours de lecture.
+    // la valeur de la variable "$value" change donc à chaque tour de boucle.
+
+    foreach ($factures as $value){
+        echo $value." &euro;<br>";
+        $total_annuel += $value;
+    }
+
+    echo "Total annuel de vos factures télphonique: ".$total_annuel." &euro;<br>";
+
+
+    // On utilise "foreach" pour afficher la clé et la valeur, ici les mois
+    foreach ($factures as $key => $value){
+        echo $key, " : ", $value,"<br>";
+    }
+
+    ?>
+
+    <?php
+    $legumes = array('carotte','poivron','aubergine','chou');
+
+    foreach ($legumes as $legume){
+        echo $legume."<br>";
+    }
+
+    // on peut aussi utiliser "foreach" pour afficher la clé et la valeur,
+    foreach ($legumes as $key => $legume){
+        echo $key, " : ", $legume,"<br>";
     }
     ?>
+
 
 </body>
 
