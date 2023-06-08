@@ -59,10 +59,24 @@
     $counter = 0;
 
     while ($counter < $lines) {
-        echo $users[$counter][0] . " " . $users[$counter][1] . "<br>";
+        echo $users[$counter][0] . " " . $users[$counter][1] . "<br><br>";
         $counter++;
     }
     ?>
+
+    <?php
+    for ($lines = 0; $lines <= 2; $lines++) {
+        echo $users[$lines][0] . " " . $users[$lines][1] . "<br>";
+    }
+    ?>
+
+    <!-- Si vous hésitez entre les deux, il suffit simplement de vous poser la question suivante : « Est-ce que je sais d'avance combien de fois je veux que mes instructions soient répétées ? ».
+
+    Si la réponse est oui, alors la boucle for  est tout indiquée.
+
+    Sinon, alors il vaut mieux utiliser la boucle while -->
+
+
 </body>
 
 </html>
